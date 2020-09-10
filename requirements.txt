@@ -1,0 +1,11 @@
+click
+fuzzywuzzy[speedup]
+joblib
+loguru
+matplotlib
+numpy
+pandas
+regex
+seaborn
+tabulate
+transformers
