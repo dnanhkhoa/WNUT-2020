@@ -1038,7 +1038,7 @@ def print_statistics(input_dir):
     logger.info("Max sentence length: {}", max(sentence_length_distribution.keys()))
 
     series = pd.Series(entity_width_distribution).sort_index().cumsum() / num_entities
-    series.plot(title="Entity Coverage Rate per Span Width")
+    series.plot(title="Entity Coverage Rate over Span Length")
     plt.show()
 
     pd.Series(relation_min_span_distribution).sort_index().plot(
@@ -1071,7 +1071,7 @@ def print_statistics(input_dir):
         / num_relations
     )
     series.plot(
-        title="Relation Coverage Rate per Sentence Segment (64)",
+        title="Relation Coverage Rate over Sentence Segment (64)",
         xticks=range(
             0, (max(sentence_length_distribution.keys()) // 64 + 1) * 64 + 1, 64
         ),
